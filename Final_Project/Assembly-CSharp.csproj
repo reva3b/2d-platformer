@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\Character Enemy Script.cs" />
      <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
      <Compile Include="Assets\Scripts\Enemy\FightState.cs" />
@@ -54,21 +55,20 @@
      <Compile Include="Assets\Scripts\Enemy\Range.cs" />
      <Compile Include="Assets\Scripts\Enemy\idle.cs" />
      <Compile Include="Assets\Scripts\GlareBehavior.cs" />
-     <Compile Include="Assets\Scripts\PlayerControl.cs" />
-     <Compile Include="Assets\Scripts\PlayerStats.cs" />
-     <Compile Include="Assets\Sprites\Game Jam Template\Scripts\DontDestroy.cs" />
-     <Compile Include="Assets\Sprites\Game Jam Template\Scripts\EventSystemChecker.cs" />
-     <Compile Include="Assets\Sprites\Game Jam Template\Scripts\Pause.cs" />
-     <Compile Include="Assets\Sprites\Game Jam Template\Scripts\PlayMusic.cs" />
-     <Compile Include="Assets\Sprites\Game Jam Template\Scripts\QuitApplication.cs" />
-     <Compile Include="Assets\Sprites\Game Jam Template\Scripts\SetAudioLevels.cs" />
-     <Compile Include="Assets\Sprites\Game Jam Template\Scripts\ShowPanels.cs" />
-     <Compile Include="Assets\Sprites\Game Jam Template\Scripts\StartOptions.cs" />
-     <None Include="Assets\Sprites\Game Jam Template\Fonts\OpenSans\License!.txt" />
-     <None Include="Assets\Sprites\Game Jam Template\GameJamTemplateReadMe.txt" />
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
- </Reference>
+     <Compile Include="Assets\Scripts\MysteryItem.cs" />
+     <Compile Include="Assets\Scripts\MysteryItemManager.cs" />
+     <Compile Include="Assets\Scripts\Player\CameraFollowPlayer.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerControl.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
+     <Compile Include="Assets\Sprites\MainMenu\Scripts\AudioVolume.cs" />
+     <Compile Include="Assets\Sprites\MainMenu\Scripts\EventSystemChecker.cs" />
+     <Compile Include="Assets\Sprites\MainMenu\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Sprites\MainMenu\Scripts\MainMenuObject.cs" />
+     <Compile Include="Assets\Sprites\MainMenu\Scripts\PauseScreen.cs" />
+     <Compile Include="Assets\Sprites\MainMenu\Scripts\QuitGame.cs" />
+     <Compile Include="Assets\Sprites\MainMenu\Scripts\ShowButtons.cs" />
+     <Compile Include="Assets\Sprites\MainMenu\Scripts\SoundManager.cs" />
+     <None Include="Assets\Sprites\MainMenu\Fonts\OpenSans\License!.txt" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
@@ -80,9 +80,6 @@
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>

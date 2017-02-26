@@ -174,7 +174,7 @@ Animator:
   m_GameObject: {fileID: 1551899906550168}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2b83be92d21bc4d20bfdcfe506fac2f9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 770727b8272d746d6bd33e539e724ae9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -190,9 +190,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1551899906550168}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3cc4765b95a5480792d6933b7f94c13, type: 3}
+  m_Script: {fileID: 11500000, guid: dfbff71ec90a448488e5213485502da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerRigidBody: {fileID: 0}
+  BulletPrefab: {fileID: 1692100382383500, guid: 499507d37b110463aa5d7730a2d99222,
+    type: 2}
   PlayerGroundPoints:
   - {fileID: 4431560003388494}
   - {fileID: 4345133637756828}
@@ -201,8 +204,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   PlayerMovementSpeed: 10
-  PlayerGroundRadius: 0.2
-  PlayerJumpForce: 400
+  PlayerGroundRadius: 0.02
+  PlayerJumpForce: 300
+  IsPlayerGunAttack: 1
   PlayerAirControl: 1
 --- !u!212 &212645914232549056
 SpriteRenderer:
