@@ -6,6 +6,15 @@ TagManager:
   tags:
   - Coin
   - Mystery Item
+  - PlayerKnife
+  - Sample_Enemy
+  - PlayerBullet
+  - Edge
+  - Enemy
+  - Sword
+  - EnemyKunai
+  - EnemySword
+  - IntroItem
   layers:
   - Default
   - TransparentFX
@@ -15,9 +24,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Objects
+  - Player
+  - Enemy
   - 
   - 
   - 
@@ -42,4 +51,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer
+    uniqueID: 2285019299
     locked: 0

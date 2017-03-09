@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
@@ -10,9 +9,7 @@ public class SoundManager : MonoBehaviour {
 	public AudioClip mainMusic;						
 	public AudioMixerSnapshot volumeDown;			
 	public AudioMixerSnapshot volumeUp;				
-
-
-	private AudioSource musicSource;				
+    private AudioSource musicSource;				
 	private float resetTime = .01f;					
 	void Awake () 
 	{

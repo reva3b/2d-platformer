@@ -10,21 +10,22 @@ using System.Collections.Generic;
 [Serializable]
 public class PlayerStats
 {
-	public int Health;
-	public int Shield;
-	public int Attack;
-	public int CoinCount;
-	public string PlayerName;
-	public int LevelID;
-	public float PositionX;
-	public float PositionY;
+    public int Health;
+    public int Shield;
+    public int CoinCount;
+    public string PlayerName;
+    public int LevelID;
+    public float PositionX;
+    public float PositionY;
 
-	PlayerStats() // Default Constructor
-	{
-		Health = 100;
-		Shield = 0;
-		Attack = 50;
-		CoinCount = 0;
-		LevelID = 0;
-	}
+    public PlayerStats() // Default Constructor
+    {
+        Health = 100;
+        Shield = 50;
+        CoinCount = 0;
+        PlayerName = "";
+        LevelID = 0;
+        PositionX = 0.0f;
+        PositionY = 0.0f;
+    }
 }

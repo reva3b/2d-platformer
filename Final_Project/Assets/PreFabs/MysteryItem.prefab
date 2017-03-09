@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50018635624760428}
   - component: {fileID: 61577949893372378}
   - component: {fileID: 114523620405314012}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MysteryItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ MonoBehaviour:
   increaseHealth: 0
   shield: 0
   gainWeapon: 0
-  decreaseSpeed: 1
+  decreaseSpeed: 0
   cantJump: 0
   moreEnemies: 0
   decreaseHealth: 0

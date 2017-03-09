@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class PauseScreen : MonoBehaviour {
 
@@ -15,12 +14,11 @@ public class PauseScreen : MonoBehaviour {
 	}
 
 	void Update () {
-
-		if (Input.GetButtonDown ("Cancel") && !isPaused && !startScript.inMainMenu) 
-		{
-			DoPause();
-		} 
-		else if (Input.GetButtonDown ("Cancel") && isPaused && !startScript.inMainMenu) 
+        if (Input.GetKey(KeyCode.Escape) == true && !isPaused)// && !isPaused && !startScript.inMainMenu)
+        {
+            DoPause();
+        }
+        else if (Input.GetKey(KeyCode.Escape) == true && isPaused)  //&& !startScript.inMainMenu) 
 		{
 			UnPause ();
 		}
