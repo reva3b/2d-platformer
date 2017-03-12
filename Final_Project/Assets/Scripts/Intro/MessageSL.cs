@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-
 //author: Sean Crawford
 
-public class MessageAK : MonoBehaviour
+public class MessageSL : MonoBehaviour
 {
     public Image Msg;
     public Text Text;
@@ -12,6 +11,9 @@ public class MessageAK : MonoBehaviour
     //private PlayerStats thePlayerStatsManager;
     public Rigidbody2D PlayerRigidBody;
     public PopMsgUP popMsg;
+
+
+
 
 
 
@@ -28,13 +30,12 @@ public class MessageAK : MonoBehaviour
 
     void Update()
     {
-        
-        if (Input.GetKey(KeyCode.Space) == true)
+
+        if ( (Input.GetKey(KeyCode.DownArrow) == true && Input.GetKey(KeyCode.RightArrow) == true) || (Input.GetKey(KeyCode.DownArrow) == true && Input.GetKey(KeyCode.LeftArrow) == true))
         {
             Msg.enabled = false;
             Text.enabled = false;
             popMsg.enMsg = false;
         }
     }
-
 }

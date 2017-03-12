@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+//author: Sean Crawford
+
 public class MessageUP : MonoBehaviour
 {
     public Image Msg;
@@ -8,6 +10,7 @@ public class MessageUP : MonoBehaviour
     private PlayerControl thePlayerControlManager;
     //private PlayerStats thePlayerStatsManager;
     public Rigidbody2D PlayerRigidBody;
+    public PopMsgUP popMsg;
 
 
 
@@ -20,6 +23,7 @@ public class MessageUP : MonoBehaviour
         thePlayerControlManager = FindObjectOfType<PlayerControl>();
         Msg.enabled = false;
         Text.enabled = false;
+        popMsg.enMsg = true;
     }
 
     void Update()
@@ -29,6 +33,7 @@ public class MessageUP : MonoBehaviour
         {
             Msg.enabled = false;
             Text.enabled = false;
+            popMsg.enMsg = false;
         }
     }
 

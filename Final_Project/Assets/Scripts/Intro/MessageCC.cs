@@ -2,17 +2,17 @@
 using UnityEngine.UI;
 
 
-using UnityEngine;
-using UnityEngine.UI;
+//author: Sean Crawford
 
 public class MessageCC : MonoBehaviour {
    // private int currCoins;
     public Image Msg;
     public Text Text;
-   // private PlayerControl thePlayerControlManager;
+    public PopMsgUP popMsg;
+    // private PlayerControl thePlayerControlManager;
     //private PlayerStats thePlayerStatsManager;
     //public Rigidbody2D PlayerRigidBody;
-   // public static PlayerStats currentPlayer = new PlayerStats();
+    // public static PlayerStats currentPlayer = new PlayerStats();
 
 
 
@@ -23,6 +23,7 @@ public class MessageCC : MonoBehaviour {
 
         Msg.enabled = false;
         Text.enabled = false;
+        popMsg.enMsg = true;
     }
 
 
@@ -35,6 +36,7 @@ public class MessageCC : MonoBehaviour {
         {
             Msg.enabled = false;
             Text.enabled = false;
+            popMsg.enMsg = false;
         }
     }
 
