@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//author: Sean Crawford
+//with code and concept contributions by: inScope Studios https://www.youtube.com/channel/UCyVsCcTte38YC9CxJtw3hBQ
 public class BumperMovement : MonoBehaviour
 {
     private BoxCollider2D playerCollider;
@@ -80,7 +82,7 @@ public class BumperMovement : MonoBehaviour
         {
             if (Math.Sign(thePlayerControlManager.PlayerRigidBody.velocity.x) != BusMag)
             {
-                PlayerControl.currentPlayer.Health -= 20;
+                //PlayerControl.currentPlayer.Health -= 20;
                // speed = 5;
             }
 

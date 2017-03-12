@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//author: Sean Crawford
+//with code and concept contributions by: Pow Vang
+
 public class WetCement : MonoBehaviour {
 
     //public static MysteryItemManager theMysteryItemManager;
@@ -63,7 +66,7 @@ public class WetCement : MonoBehaviour {
         if (other.gameObject.tag == "Player")
         {
             thePlayerControlManager.PlayerMovementSpeed = 10;
-            thePlayerControlManager.PlayerJumpForce = 400;
+            thePlayerControlManager.PlayerJumpForce = 550;
         }
     }
 

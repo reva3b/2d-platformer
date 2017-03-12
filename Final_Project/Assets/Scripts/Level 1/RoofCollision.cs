@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//author: Sean Crawford
+//with code and concept contributions by: inScope Studios https://www.youtube.com/channel/UCyVsCcTte38YC9CxJtw3hBQ
+
 public class RoofCollision : MonoBehaviour {
 
     private BoxCollider2D playerCollider;

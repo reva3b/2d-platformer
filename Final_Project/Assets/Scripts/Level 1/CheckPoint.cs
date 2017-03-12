@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//author: Sean Crawford
+//with code and concepts contributed by: Space Lizard Studio http://spacelizardstudio.com/devblog/index.php/2016/02/26/unity-how-to-design-a-simple-checkpoint-system/
+
 public class CheckPoint : MonoBehaviour {
     // Use this for initialization
     void Start()
