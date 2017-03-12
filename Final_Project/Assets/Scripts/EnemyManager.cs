@@ -1,44 +1,25 @@
-﻿using System.Collections;
+﻿/*
+ Author: Pow Vang
+ Purpose: This script has an enemy spawn point located in the scene and once the Spawn function is called, it instantiate an enemy at the spawn point.
+ 
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour {
-    //public enum SpawnType { Random, oneByOne}
-    //public SpawnType spawnType;
-    //public GameObject[] spawnPoints;
-    //public string toSpawnResourceName = "GameObject";
-    //private GameObject toSpawn;
-
-
-    public GameObject enemy;
-    public float spawnTime = 3f;
-    public Transform[] spawnPoints;
+    public Enemy enemy;
+    public Transform spawnPoints;
 	// Use this for initialization
-	void Start () {
-        //toSpawn = Resources.Load(toSpawnResourceName) as GameObject;
-        //Invoke("Spawn", spawnTime);	
-	}
-	
-	public void Spawn () {
+	void Start ()
+    {
 
+        enemy = FindObjectOfType<Enemy>();
+    }
 
-        // Find a random index between zero and one less than the number of spawn points.
-        int spawnPointIndex = Random.Range(0, spawnPoints.Length);
-
-        // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
-        Instantiate(enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
-
-
-
-
-        //GameObject spawnPoint;
-
-        //spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-
-        //int spawnPointIndex = Random.Range(0, 3);//spawnPoints.Length);
-        //Instantiate(toSpawn spawnPoints[spawnPoint], Quaternion.identity);
-        //Instantiate(enemy, spawnPoints[spawnPointIndex].position,spawnPoints[spawnPointIndex].rotation);
-
-
+    public void Spawn () //instantiate a new enemy at the enemy spawn point
+    {
+        GameObject OBject = Instantiate(Resources.Load("Enemy"), spawnPoints.position, spawnPoints.rotation) as GameObject; 
     }
 }
