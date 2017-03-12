@@ -51,3 +51,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a5aa901a32aa854ab2650cb676fcdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  increaseSpeed: 0
+  superJump: 0
+  increaseHealth: 0
+  shield: 0
+  gainWeapon: 0
+  decreaseSpeed: 0
+  cantJump: 0
+  moreEnemies: 0
+  decreaseHealth: 0
+  loseWeapon: 0
+  immortality: 0
+  spawnEnemies: {fileID: 0}
