@@ -1,21 +1,25 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿/*
+	Author: Ravi Teja Vedantam
+    Reference- https://gamedevelopment.tutsplus.com/tutorials/how-to-save-and-load-your-players-progress-in-unity--cms-20934
+*/
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
- 
-public static class SaveLoad
-{
+using UnityEngine;
+using System.Collections;
 
-    public static List<Game> savedGames = new List<Game>();
+ 
+public static class SaveLoadManager
+{
+ public static List<Game> savedGames = new List<Game>();
 
     public static void Save()
     {
-        SaveLoad.savedGames.Add(Game.current);
+        //Debug.Log("Save to:" + Application.persistentDataPath);
+        SaveLoadManager.savedGames.Add(Game.current);
         BinaryFormatter bf = new BinaryFormatter();
-        //Application.persistentDataPath is a string, so if you wanted you can put that into debug.log if you want to know where save games are located
         FileStream file = File.Create(Application.persistentDataPath + "/saveFile.dat"); 
-        bf.Serialize(file, SaveLoad.savedGames);
+        bf.Serialize(file, SaveLoadManager.savedGames);
         file.Close();
     }
 
@@ -25,7 +29,7 @@ public static class SaveLoad
         {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/saveFile.dat", FileMode.Open);
-            SaveLoad.savedGames = (List<Game>)bf.Deserialize(file);
+            SaveLoadManager.savedGames = (List<Game>)bf.Deserialize(file);
             file.Close();
         }
     }
