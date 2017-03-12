@@ -1,40 +1,54 @@
-﻿using System.Collections;
+﻿// Afam Ezenekwe
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : Char 
 {
+
+
+	public override void Death () // Function that is used to destroy the enemy class if the player kills the enemy.
+	{
+		Destroy (gameObject);	
+	}
+
+
+
 	
 
-	public override bool IsDead 
+	public override bool IsDead // Function in enemy that will dictate the death of enemy if the health reaches zero. 
 	{
 		get {
 			return Health <= 0;
 		}
 	}
 
-	public override IEnumerator TakeDamage()
+	public override IEnumerator TakeDamage() // Function in the enemy class that allows the enemy to take damage when the player attackes the enemy.
 	{
 		Health -= 10;
 		if (!IsDead) 
 		{
-			EnemyAnimator.SetTrigger ("Damage");
+			EnemyAnimator.SetTrigger ("Damage"); // The damage animator will begin.
 		} 
 		else 
 		{
-			EnemyAnimator.SetTrigger ("Die");
+			EnemyAnimator.SetTrigger ("Die"); // The Die animator will begin.
 			yield return null;
 		}
 	}
 
-	private Ienemy currentState;
-	public GameObject Target { get; set; }
-	[SerializeField]
-	private float AttackRange;
-	[SerializeField]
-	private float ThrowRange;
+	private Ienemy currentState; // 
 
-	public bool InAttackRange
+	public GameObject Target { get; set; } // Allows for the enemy to be targeted by the player.
+
+	[SerializeField]
+	private float AttackRange; // Private float to allow for a number to be in the attackrange.
+
+	[SerializeField]
+	private float ThrowRange; // Private float to allow for a number to be in the Throwrange.
+
+	public bool InAttackRange // Boolean function to depict the InAttackRange.
 	{
 		get
 		{
@@ -47,7 +61,7 @@ public class Enemy : Char
 		}
 	}
 
-	public bool InThrowRange
+	public bool InThrowRange // Function to indicate when the enemy will be in ThrowRange to attack the player.
 	{
 		get
 		{
@@ -59,13 +73,13 @@ public class Enemy : Char
 		}
 	}
 
-	public override void Start () 
+	public override void Start () // Starts the function the enemy.
 	{
 		base.Start();
 		ChangeState (new Idle ());
 	}
 	
-	private void LookAtTarget()
+	private void LookAtTarget() // Function that is used to have the enemy look at the target.
 	{
 		if (Target != null) 
 		{
@@ -78,7 +92,7 @@ public class Enemy : Char
 		}
 	}
 
-	//Update is called once per frame
+	// Update is called once per frame
 	void Update () 
 	{
 		if (!IsDead)
@@ -92,7 +106,7 @@ public class Enemy : Char
 
 	}
 
-	public void ChangeState(Ienemy newState)
+	public void ChangeState(Ienemy newState) // Changes the state of the enemy.
 	{
 		if (currentState != null) 
 		{
@@ -102,13 +116,13 @@ public class Enemy : Char
 		currentState.Enter(this);
 	}
 
-	public void Move()
+	public void Move() // Function that is used to move the enemy.
 	{
 		EnemyAnimator.SetFloat ("speed", 1);
 		transform.Translate(GetDirection() * (PlayerMovementSpeed * Time.deltaTime));
 	}
 
-	public Vector2 GetDirection()
+	public Vector2 GetDirection() // Gets the direction of which way the enemy is going.
 	{
 		return IsPlayerFacingRight ? Vector2.right : Vector2.left;
 	}
