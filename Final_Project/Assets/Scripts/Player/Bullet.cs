@@ -1,5 +1,8 @@
 ﻿/* 
-	Author: Revathi Bhuvaneswari
+   Author: Revathi Bhuvaneswari
+   
+   This script file is responsible for controlling the position and movement of the bullet.
+
 */
 
 using System.Collections;
