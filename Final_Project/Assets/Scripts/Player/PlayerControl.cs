@@ -1,20 +1,19 @@
 ﻿/*
 	Author: Revathi Bhuvaneswari
-	
+    
+    This script file is responsible for controlling the player gameobject, and for implementing all the important functionalities of player
+
 */
 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public delegate void HandlePlayerDeadEvent();
 
 public class PlayerControl : MonoBehaviour
 {
-	
-
-
-
     public static PlayerStats currentPlayer = new PlayerStats();
 
     [SerializeField]
@@ -152,6 +151,10 @@ public class PlayerControl : MonoBehaviour
 
         PlayerStartPosition = transform.position;
 
+        currentPlayer.Health = 100;
+
+        currentPlayer.Shield = 50;
+
         PlayerRigidBody = GetComponent<Rigidbody2D>();
         PlayerAnimator = GetComponent<Animator>();
         PlayerSpriteRenderer = GetComponent<SpriteRenderer>();
@@ -159,8 +162,6 @@ public class PlayerControl : MonoBehaviour
     }
 
     // Update is called once per frame
-    
-
 	void Update()
     {
         PlayerHealthBar.InitializePlayerBarStat(currentPlayer.Health, 100);  // initializing the values for the player health bar
@@ -177,6 +178,12 @@ public class PlayerControl : MonoBehaviour
             }
 
             HandlePlayerKeyPress(); // only take the player's input if the player sprite is not dead in the game
+        }
+
+        // if player is dead, change the scene to level selection screen
+        if (IsPlayerDead == true)
+        {
+            StartCoroutine(ChangeSceneIfPlayerDead());
         }
     }
 
@@ -203,6 +210,13 @@ public class PlayerControl : MonoBehaviour
         }
 
         ResetAllPlayerValues();
+    }
+
+    private IEnumerator ChangeSceneIfPlayerDead()
+    {
+        yield return new WaitForSeconds(4);
+        LevelManager.releasedLevelStatic = 2;
+        SceneManager.LoadScene(1); // Load the Level Selection Scene - if the player dies within the scene
     }
 
     // This function changes the settings of the different layers present inside the Player Animator - Ground Layer, Air Layer etc.
@@ -502,27 +516,32 @@ public class PlayerControl : MonoBehaviour
         if (ShouldPlayerRespawn == true)
         {
             PlayerRigidBody.velocity = Vector2.zero; // if the player is dead, the player object should not move
-                                                     // PlayerAnimator.ResetTrigger ("dead_player_animator");
-                                                     // PlayerAnimator.SetTrigger ("respawn_player_animator"); // trigger the idle animation because the player is respawning
+            // PlayerAnimator.ResetTrigger ("dead_player_animator");
+            // PlayerAnimator.SetTrigger ("respawn_player_animator"); // trigger the idle animation because the player is respawning
             transform.position = PlayerStartPosition; // MUST CHANGE CODE DEPENDING ON CHECKPOINTS CLASS
             currentPlayer.Health = 100; // MUST CHANGE CODE DEPENDING ON CHECKPOINTS CLASS
+            currentPlayer.Shield = 50; // MUST CHANGE CODE DEPENDING ON CHECKPOINTS CLASS
         }
     }
-
     /*
 	public void OnTriggerEnter2D (Collision2D other)
 	{
 		// use this function to affect the player's health if the player is touched by a triggered box collider 2d like the enemy's knife etc.
 		// use the DamageSourcesForPlayerList inside the Player's inspector - add all the things that the player could get damaged from
 		// this function has a similar implementation to the OnCollisionEnter2D first if statement
-
          // if the player collides with an trigger collider like EnemySword etc. , the player should take damage
         if (DamageSourcesForPlayer.Contains(other.gameObject.tag)) // if the object has a tag that is within list DamageSourcesForPlayer list, the player should take damage 
         {
             StartCoroutine(PlayerTakeDamage());
         }
+
+        if ( (other.gameObject.tag == "EnemyKunai") || (other.gameObject.tag == "EnemySword") )
+        {
+            // StartCoroutine(PlayerTakeDamage());
+            Debug.Log("Collided with ENEMY!!");
+        }
 	}
-	*/
+    */
 
     public void OnCollisionEnter2D(Collision2D other)
     {

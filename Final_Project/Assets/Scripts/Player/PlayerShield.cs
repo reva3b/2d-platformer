@@ -1,5 +1,8 @@
 ﻿/*
     Author: Revathi Bhuvaneswari
+    
+    This script is responsible for controlling the appearance of the Player’s Shield Bar
+
 */
 
 using System.Collections;

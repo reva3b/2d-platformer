@@ -9,9 +9,9 @@ public class WelcomeScreenScript : MonoBehaviour {
     {
 
     }
-    public void ChangeScene(string name)
+    public void ChangeScene(int number)
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(number);
     }
     
 }

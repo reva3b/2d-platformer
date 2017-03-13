@@ -1,11 +1,15 @@
-﻿using UnityEngine;
+﻿
+/*
+	Author: Ravi Teja Vedantam
+*/
+using UnityEngine;
 public class WelcomeScreenButtons : MonoBehaviour
 {
 
-    public GameObject continuePanel;
-    public GameObject settingsTint;
+    public GameObject continuePanel; // the continue panel is supposed to appear when the player enters the game and wants to quit
+    public GameObject settingsTint; // the settings tint will only add to the pause panel's background
 
-    public void ShowButtonsPanel()
+    public void ShowButtonsPanel()    
     {
         continuePanel.SetActive(true);
         settingsTint.SetActive(true);

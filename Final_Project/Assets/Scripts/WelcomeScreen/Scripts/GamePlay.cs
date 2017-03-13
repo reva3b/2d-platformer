@@ -1,12 +1,13 @@
-﻿using UnityEngine;
+﻿
+/*
+	Author: Ravi Teja Vedantam
+*/
+using UnityEngine;
 using System.Collections;
 
 public class GamePlay : MonoBehaviour
 {
-
     public GameObject playerPrefab;
-
-    // Use this for initialization
     void Start()
     {
         for (int i = 0; i < 1; i++)

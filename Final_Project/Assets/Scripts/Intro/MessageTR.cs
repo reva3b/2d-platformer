@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+//author: Sean Crawford
 
 public class MessageTR : MonoBehaviour
 {
 
     public Image Msg;
     public Text Text;
+    public PopMsgUP popMsg;
 
 
 
@@ -18,6 +20,7 @@ public class MessageTR : MonoBehaviour
 
         Msg.enabled = false;
         Text.enabled = false;
+        popMsg.enMsg = true;
     }
 
 
@@ -30,6 +33,7 @@ public class MessageTR : MonoBehaviour
         {
             Msg.enabled = false;
             Text.enabled = false;
+            popMsg.enMsg = false;
         }
     }
 

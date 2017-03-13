@@ -1,21 +1,27 @@
-﻿using UnityEngine;
+﻿
+/*
+	Author: Ravi Teja Vedantam
+    	Referenced from the free sprite known as game jam template in unity.
+
+*/
+using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour {
-
+    //monobehavior is applicable for the soundmanager
 
 	public AudioClip titleMusic;					
 	public AudioClip mainMusic;						
-	public AudioMixerSnapshot volumeDown;			
-	public AudioMixerSnapshot volumeUp;				
+	public AudioMixerSnapshot volumeDown;	// volume changes with the useage of AudioMixerSnapshot. In this case it decreases.	
+	public AudioMixerSnapshot volumeUp;		// volume increases		
     private AudioSource musicSource;				
-	private float resetTime = .01f;					
+	private float resetTime = .01f;		//time for the change to take place 			
 	void Awake () 
 	{
 		musicSource = GetComponent<AudioSource> ();
 	}
-	public void PlayLevelMusic()
+	public void PlayLevelMusic() //plays in game music
 	{
 		switch (SceneManager.GetActiveScene().buildIndex)
 		{
@@ -31,8 +37,8 @@ public class SoundManager : MonoBehaviour {
 		musicSource.Play ();
 	}
 	public void PlaySelectedMusic(int musicChoice)
-	{
-		switch (musicChoice) 
+	{// choice to change the mousic between titleMusic and mainMusic
+        switch (musicChoice) 
 		{
 				case 0:
 			musicSource.clip = titleMusic;
@@ -43,7 +49,7 @@ public class SoundManager : MonoBehaviour {
 		}
 		musicSource.Play ();
 	}
-	public void FadeUp(float fadeTime)
+	public void FadeUp(float fadeTime) // fadeup and fadeDown will take effect after the volume is changed
 	{
 		volumeUp.TransitionTo (fadeTime);
 	}

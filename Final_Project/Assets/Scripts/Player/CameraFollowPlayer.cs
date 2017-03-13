@@ -1,6 +1,8 @@
 ﻿/*
 	Author: Revathi Bhuvaneswari
 	
+    This script file is responsible for controlling the main camera in the game levels in such a way that the camera always follows the player object throughout the level
+
 */
 
 using System.Collections;

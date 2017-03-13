@@ -2,8 +2,7 @@
 using UnityEngine.UI;
 
 
-using UnityEngine;
-using UnityEngine.UI;
+//author: Sean Crawford
 
 public class MessageAK : MonoBehaviour
 {
@@ -12,7 +11,7 @@ public class MessageAK : MonoBehaviour
     private PlayerControl thePlayerControlManager;
     //private PlayerStats thePlayerStatsManager;
     public Rigidbody2D PlayerRigidBody;
-
+    public PopMsgUP popMsg;
 
 
 
@@ -24,6 +23,7 @@ public class MessageAK : MonoBehaviour
         thePlayerControlManager = FindObjectOfType<PlayerControl>();
         Msg.enabled = false;
         Text.enabled = false;
+        popMsg.enMsg = true;
     }
 
     void Update()
@@ -33,6 +33,7 @@ public class MessageAK : MonoBehaviour
         {
             Msg.enabled = false;
             Text.enabled = false;
+            popMsg.enMsg = false;
         }
     }
 

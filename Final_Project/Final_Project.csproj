@@ -73,9 +73,6 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.Cecil">
-      <HintPath>Library\UnityAssemblies\Mono.Cecil.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AttackBehaviour.cs" />
@@ -83,12 +80,13 @@
     <Compile Include="Assets\EnemyAttackBehavior.cs" />
     <Compile Include="Assets\Scripts\Enemy\Attack.cs" />
     <Compile Include="Assets\Scripts\Enemy\Char.cs" />
+    <Compile Include="Assets\Scripts\Enemy\DeathBehaviour.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Enemy\Idle.cs" />
     <Compile Include="Assets\Scripts\Enemy\Ienemy.cs" />
     <Compile Include="Assets\Scripts\Enemy\Ignore.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Kunai.cs" />
     <Compile Include="Assets\Scripts\Enemy\Sight.cs" />
-    <Compile Include="Assets\Scripts\Enemy\User.cs" />
     <Compile Include="Assets\Scripts\Enemy\patrol.cs" />
     <Compile Include="Assets\Scripts\Enemy\range.cs" />
     <Compile Include="Assets\Scripts\EnemyManager.cs" />
@@ -97,17 +95,18 @@
     <Compile Include="Assets\Scripts\Intro\MessageCC.cs" />
     <Compile Include="Assets\Scripts\Intro\MessageLR.cs" />
     <Compile Include="Assets\Scripts\Intro\MessageMI.cs" />
+    <Compile Include="Assets\Scripts\Intro\MessageSL.cs" />
     <Compile Include="Assets\Scripts\Intro\MessageTR.cs" />
     <Compile Include="Assets\Scripts\Intro\MessageUP.cs" />
-    <Compile Include="Assets\Scripts\Intro\PopMsgAK.cs" />
     <Compile Include="Assets\Scripts\Intro\PopMsgUP.cs" />
-    <Compile Include="Assets\Scripts\Kunai.cs" />
     <Compile Include="Assets\Scripts\Level 1\BumperMovement.cs" />
     <Compile Include="Assets\Scripts\Level 1\BusMovement.cs" />
     <Compile Include="Assets\Scripts\Level 1\CarMovement.cs" />
     <Compile Include="Assets\Scripts\Level 1\CheckPoint.cs" />
     <Compile Include="Assets\Scripts\Level 1\CheckPointManager.cs" />
     <Compile Include="Assets\Scripts\Level 1\DeathManager.cs" />
+    <Compile Include="Assets\Scripts\Level 1\PauseButtons.cs" />
+    <Compile Include="Assets\Scripts\Level 1\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Level 1\RoofCollision.cs" />
     <Compile Include="Assets\Scripts\Level 1\WetCement.cs" />
     <Compile Include="Assets\Scripts\LevelManager\ButtonSettings.cs" />
@@ -125,14 +124,17 @@
     <Compile Include="Assets\Scripts\Player\PlayerShield.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Trophy.cs" />
+    <Compile Include="Assets\Scripts\User.cs" />
     <Compile Include="Assets\Scripts\WelcomeScreen\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\WelcomeScreen\Scripts\Game.cs" />
     <Compile Include="Assets\Scripts\WelcomeScreen\Scripts\GamePlay.cs" />
     <Compile Include="Assets\Scripts\WelcomeScreen\Scripts\SaveLoadManager.cs" />
     <Compile Include="Assets\Scripts\WelcomeScreen\Scripts\WelcomeScreen.cs" />
     <Compile Include="Assets\Scripts\WelcomeScreen\Scripts\WelcomeScreenButtons.cs" />
+    <Compile Include="Assets\Scripts\WelcomeScreen\Scripts\toWelcomeScreen.cs" />
     <Compile Include="Assets\Scripts\WelcomeScreen\WelcomeScreenScript.cs" />
     <Compile Include="Assets\Scripts\killPlayer.cs" />
+    <Compile Include="Assets\Scripts\trophyMessage.cs" />
     <Compile Include="Assets\Sprites\MainMenu\Scripts\EventSystemChecker.cs" />
     <Compile Include="Assets\Sprites\MainMenu\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Sprites\MainMenu\Scripts\MainMenuObject.cs" />
@@ -145,7 +147,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Sprites\MainMenu\Fonts\OpenSans\License!.txt" />
-    <None Include="Assets\Sprites\Trophy\Tag.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

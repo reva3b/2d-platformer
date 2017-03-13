@@ -20,14 +20,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4673031404436408}
   - component: {fileID: 212056454741041164}
-  - component: {fileID: 76444109514367370}
   - component: {fileID: 50482921755532812}
   - component: {fileID: 247240414059097342}
   - component: {fileID: 58178565232882704}
   - component: {fileID: 114528912858304090}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Boulder
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1549395198833768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.7, y: 26.3, z: 0}
-  m_LocalScale: {x: 76.703636, y: 76.703636, z: 3.8351817}
+  m_LocalPosition: {x: -12.2, y: -2.5, z: 0}
+  m_LocalScale: {x: 30, y: 30, z: 3.8351817}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -59,7 +58,7 @@ Rigidbody2D:
   m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -79,26 +78,13 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.24
---- !u!76 &76444109514367370
-WorldParticleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1549395198833768}
-  m_BounceFactor: 0.5
-  m_CollisionEnergyLoss: 1
-  m_CollidesWith:
-    serializedVersion: 2
-    m_Bits: 1536
-  m_SendCollisionMessage: 1
-  m_MinKillVelocity: 0
 --- !u!114 &114528912858304090
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1549395198833768}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45dd1f53ea736664e9a609cc539d87c4, type: 3}
   m_Name: 
@@ -133,7 +119,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 717f2214304fb8f48bcfdc9274359f32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -145,6 +131,6 @@ ConstantForce2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1549395198833768}
   m_Enabled: 1
-  m_Force: {x: 100, y: 0}
-  m_RelativeForce: {x: 100, y: 0}
-  m_Torque: 100
+  m_Force: {x: 5, y: 0}
+  m_RelativeForce: {x: 5, y: 0}
+  m_Torque: 0

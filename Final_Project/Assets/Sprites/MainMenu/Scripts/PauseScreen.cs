@@ -1,11 +1,17 @@
-﻿using UnityEngine;
+﻿
+/*
+	Author: Ravi Teja Vedantam
+    	Referenced from the free sprite known as game jam template in unity.
+
+*/
+using UnityEngine;
 
 public class PauseScreen : MonoBehaviour {
 
 
-	private ShowButtons showPanels;						
+	private ShowButtons showPanels;				// calls the showButtons class to allow the panel to have the options available		
 	private bool isPaused;								
-	private MainMenu startScript;					
+	private MainMenu startScript;			//calls the mainmenu because the play option allows the pause panel to appear		
 	
 	void Awake()
 	{
@@ -14,32 +20,28 @@ public class PauseScreen : MonoBehaviour {
 	}
 
 	void Update () {
-        if (Input.GetKey(KeyCode.Escape) == true && !isPaused)// && !isPaused && !startScript.inMainMenu)
-        {
-            DoPause();
-        }
-        else if (Input.GetKey(KeyCode.Escape) == true && isPaused)  //&& !startScript.inMainMenu) 
+        if (Input.GetButtonDown ("Cancel") && !isPaused && !startScript.inMainMenu) //GetButtonDown gets the key input and calls the pause panel
+		{
+			DoPause();
+		} 
+		else if (Input.GetButtonDown ("Cancel") && isPaused && !startScript.inMainMenu) //unpauses the pause panel when the key is pressed again
 		{
 			UnPause ();
 		}
 	
 	}
-
-
-	public void DoPause()
+    //pause function to show the pause panel
+    public void DoPause() 
 	{
 		isPaused = true;
 		Time.timeScale = 0;
 		showPanels.ShowPausePanel ();
 	}
-
-
-	public void UnPause()
+    // pause function to hide the pause panel
+    public void UnPause()
 	{
 		isPaused = false;
 		Time.timeScale = 1;
 		showPanels.HidePausePanel ();
 	}
-
-
 }

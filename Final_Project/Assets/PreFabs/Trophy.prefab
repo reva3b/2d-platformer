@@ -23,9 +23,10 @@ GameObject:
   - component: {fileID: 50421803623982794}
   - component: {fileID: 60833964471496002}
   - component: {fileID: 114771423773165678}
+  - component: {fileID: 114091905920491514}
   m_Layer: 8
   m_Name: Trophy
-  m_TagString: Untagged
+  m_TagString: Trophy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1670250913912692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.34, y: -1.03, z: 0}
+  m_LocalPosition: {x: 263.8, y: 7.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -268,6 +269,19 @@ PolygonCollider2D:
       - {x: 0.85999995, y: -1.5799999}
       - {x: 0.89, y: -1.5999999}
       - {x: 0.88, y: -1.5799999}
+--- !u!114 &114091905920491514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1670250913912692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db6df7b19cbabbc4698ff370c96e0be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Msg: {fileID: 0}
+  Text: {fileID: 0}
 --- !u!114 &114771423773165678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -279,6 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2215b0c3484f3594ea5f402c641a0f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obj: {fileID: 1670250913912692}
 --- !u!212 &212873102383874506
 SpriteRenderer:
   m_ObjectHideFlags: 1

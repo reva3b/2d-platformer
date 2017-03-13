@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 50578190085217920}
   - component: {fileID: 114502258716962774}
   - component: {fileID: 61440982041651760}
+  - component: {fileID: 114206210270621430}
+  - component: {fileID: 114081841832225848}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -179,7 +181,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1551899906550168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: -1.235, z: 0}
+  m_LocalPosition: {x: 20.15, y: 0.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4431560003388494}
@@ -279,6 +281,34 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114081841832225848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1551899906550168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098a81e6df1916a4d8dafafa366003b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
+  mysteryItemDisplay: {fileID: 0}
+  fadeTime: 8
+  displayOn: 0
+--- !u!114 &114206210270621430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1551899906550168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468cf756723c1434381582db96225066, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinDisplay: {fileID: 0}
+  coin: {fileID: 0}
 --- !u!114 &114502258716962774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -302,18 +332,19 @@ MonoBehaviour:
     type: 2}
   PlayerKnifeCollider: {fileID: 68417205217422104}
   DamageSourcesForPlayer:
-  - EnemyKunai
-  - EnemySword
+  - Sample_Enemy
+  - Enemies
+  - Enemy
   PlayerGroundPoints:
   - {fileID: 4431560003388494}
   - {fileID: 4345133637756828}
   - {fileID: 4532948260410760}
   WhatIsGroundForPlayer:
     serializedVersion: 2
-    m_Bits: 4294966015
+    m_Bits: 4294967295
   PlayerMovementSpeed: 10
   PlayerGroundRadius: 0.02
-  PlayerJumpForce: 400
+  PlayerJumpForce: 550
   IsPlayerGunAttack: 1
   IsPlayerImmortal: 0
   PlayerImmortalTime: 12

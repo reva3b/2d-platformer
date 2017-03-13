@@ -10,8 +10,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: Final_Project
+  companyName: Team_Epsilon
+  productName: The Undercover Archeologist
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21176471, a: 1}
@@ -215,7 +215,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: c8d377b47197e47038702726a6da140a, type: 3}
+      m_Icon: {fileID: 2800000, guid: ff76db92aa4f8449290430fd8e9f2d54, type: 3}
       m_Width: 128
       m_Height: 128
   m_BuildTargetBatching: []

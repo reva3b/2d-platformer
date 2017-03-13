@@ -1,15 +1,17 @@
-﻿using System.Collections;
+﻿// Afam Ezenekwe
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class patrol : Ienemy
 
 {
-	private Enemy enemy;
-	private float ptimer;
-	private float pduration = 5;
+	private Enemy enemy; // Allows access for the enemy script in the Patrol class.
+	private float ptimer; // Give a patrol timer.
+	private float pduration = 5; // Gives the amount time the enemy will patrol.
 
-	public void execute ()
+	public void execute () // Executes the Patrol function for the enemy.
 	{
 		Debug.Log (" I'm patrol");	
 		Patrol ();
@@ -20,7 +22,7 @@ public class patrol : Ienemy
 		}
 	}
 
-	public void Enter (Enemy enemy)
+	public void Enter (Enemy enemy) // Allows for the enemy script to be accessed in the patrol function and executed.
 	{
 		this.enemy = enemy;
 	}
@@ -30,7 +32,7 @@ public class patrol : Ienemy
 		
 	}
 
-	public void OnTriggerEnter (Collider2D other)
+	public void OnTriggerEnter (Collider2D other) // Allows access for the trigger function.
 	{
 		if (other.tag == "Edge") 
 		{
@@ -38,7 +40,7 @@ public class patrol : Ienemy
 		}
 	}
 
-	private void Patrol()
+	private void Patrol() // function that allows for the enemy to patrol across the stage.
 	{
 		
 		ptimer += Time.deltaTime;

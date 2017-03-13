@@ -1,5 +1,8 @@
 ﻿/*
     Author: Revathi Bhuvaneswari
+
+    This script is responsible for initializing the player health bar with the current health of the player, and the player shield bar with the current shield value of the player
+
 */
 
 using System.Collections;

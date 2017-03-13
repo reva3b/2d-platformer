@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+	Author: Referenced from the free sprite known as game jam template in unity.
+*/
+
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;

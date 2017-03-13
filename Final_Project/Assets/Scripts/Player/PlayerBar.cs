@@ -1,5 +1,8 @@
 ﻿/*
     Author: Revathi Bhuvaneswari
+    
+    This script file is responsible for controlling the appearance of the Player’s health bar
+
 */
 
 using System.Collections;

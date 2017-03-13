@@ -1,19 +1,23 @@
-﻿using UnityEngine;
+﻿/*
+	Author: Ravi Teja Vedantam
+*/
+
+using UnityEngine;
 using UnityEngine.Audio;
 
 public class SetAudioLevels : MonoBehaviour {
 
-	public AudioMixer mainMixer;					
+	public AudioMixer mainMixer;
 
-	
-	public void SetMusicLevel(float musicLvl)
+    //the audio that is changed here will be the background musicVol
+    public void SetMusicLevel(float musicLvl)
 	{
-		mainMixer.SetFloat("musicVol", musicLvl);
+		mainMixer.SetFloat("musicVol", musicLvl); 
 	}
-
-	public void SetSfxLevel(float sfxLevel)
+    //the audio that is changed here will be the in game sound effectsVol
+    public void SetSfxLevel(float sfxLevel)
 	{
-		mainMixer.SetFloat("sfxVol", sfxLevel);
-	}
+		mainMixer.SetFloat("sfxVol", sfxLevel); 
+    }
 	
 }

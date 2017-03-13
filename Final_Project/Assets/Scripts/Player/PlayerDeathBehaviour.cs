@@ -1,5 +1,8 @@
 ﻿/*
 	Author: Revathi Bhuvaneswari
+    
+    This script is responsible for controlling the player’s sprite’s death animation when the player's health reaches 0
+
 */
 
 using System.Collections;
