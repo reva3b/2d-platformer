@@ -1,0 +1,50 @@
+<linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="ButtonSettings">
+			<method name="ButtonMenu2"/>
+			<method name="ButtonMenu"/>
+			<method name="ButtonMenu2"/>
+		</type>
+		<type fullname="PauseScreen">
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+			<method name="UnPause"/>
+		</type>
+		<type fullname="QuitGame">
+			<method name="Quit"/>
+			<method name="Quit"/>
+			<method name="Quit"/>
+		</type>
+		<type fullname="MainMenu">
+			<method name="StartButtonClicked"/>
+			<method name="StartButtonClicked"/>
+			<method name="StartButtonClicked"/>
+		</type>
+		<type fullname="LevelManager">
+			<method name="LevelSelect"/>
+			<method name="LevelSelect"/>
+			<method name="LevelSelect"/>
+			<method name="LevelSelect"/>
+			<method name="LevelSelect"/>
+			<method name="LevelSelect"/>
+			<method name="LevelSelect"/>
+			<method name="LevelSelect"/>
+			<method name="LevelSelect"/>
+		</type>
+		<type fullname="ShowButtons">
+			<method name="ShowButtonsPanel"/>
+			<method name="HideButtonsPanel"/>
+			<method name="HideButtonsPanel"/>
+		</type>
+		<type fullname="SetAudioLevels">
+			<method name="SetSfxLevel"/>
+			<method name="SetMusicLevel"/>
+		</type>
+		<type fullname="WelcomeScreenScript">
+			<method name="ChangeScene"/>
+			<method name="ChangeScene"/>
+		</type>
+	</assembly>
+</linker>
