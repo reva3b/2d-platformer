@@ -1,7 +1,12 @@
 ﻿/*
 	Author: Revathi Bhuvaneswari
+<<<<<<< HEAD
     
     This script is responsible for controlling the player’s sprite’s death animation when the player's health reaches 0
+=======
+    
+    This script is responsible for controlling the player’s sprite’s death animation when the player's health reaches 0
+>>>>>>> origin/master
 
 */
 
